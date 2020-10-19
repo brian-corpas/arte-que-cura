@@ -1,6 +1,10 @@
 <div class="profile-box">
   <div class="card border-light mb-3" style="max-width: 18rem;">
-    <div class="card-header"><%= "Bem vindo #{current_user.email}!" %></div>
+    <% if current_user.first_name.present? %>
+      <div class="card-header"><%= "Bem-vindo #{current_user.first_name.capitalize}!" %></div>
+    <% else %>
+      <div class="card-header"><%= "Bem-vindo #{current_user.email}!" %></div>
+    <% end %>
       <div class="card-body">
     <!-- <h5 class="card-title">Light card title</h5> -->
         <p class="card-text"><%= link_to "Actualizar Info Pessoal", edit_user_registration_path, class: "text-secondary" %></p>

@@ -17,6 +17,18 @@
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
 
+            <%= f.input :first_name,
+                         hint: "Introduza o seu nome",
+                         required: false %>
+            <%= f.input :last_name,
+                         hint: "Introduza o seu apelido",
+                         required: false %>
+            <%= f.input :phone_number,
+                         hint: "Introduza o seu contacto telefónico",
+                         required: false %>
+            <%= f.input :address,
+                         hint: "Introduza a sua morada",
+                         required: false %>
             <%= f.input :password,
                         hint: "leave it blank if you don't want to change it",
                         required: false,
