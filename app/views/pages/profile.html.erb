@@ -1,0 +1,24 @@
+<div class="profile-box">
+  <div class="card border-light mb-3" style="max-width: 18rem;">
+    <% if current_user.first_name.present? %>
+      <div class="card-header"><%= "Bem-vindo #{current_user.first_name.capitalize}!" %></div>
+    <% else %>
+      <div class="card-header"><%= "Bem-vindo #{current_user.email}!" %></div>
+    <% end %>
+      <div class="card-body">
+    <!-- <h5 class="card-title">Light card title</h5> -->
+        <p class="card-text"><%= link_to "Actualizar Info Pessoal", edit_user_registration_path, class: "text-secondary" %></p>
+     </div>
+    </div>
+
+    <div class="card text-center">
+      <div class="card-header">
+        As minhas compras:
+      </div>
+      <div class="card-body">
+      <h5 class="card-title">Ainda não efectuou nenhuma compra</h5>
+      </div>
+      <div class="card-footer text-muted">
+      </div>
+    </div>
+</div>
