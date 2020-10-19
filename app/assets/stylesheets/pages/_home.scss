@@ -1,1 +1,20 @@
 // Specific CSS for your home-page
+body {
+    background-image: linear-gradient(#f4d9c6, white, #f4d9c6);
+}
+
+.logopic {
+  text-align: center;
+  margin: auto 42px;
+  display: block;
+  position: relative;
+  margin-top: 75px;
+}
+
+.presentation_text p {
+font-family: 'Sansita Swashed', cursive;
+font-size: 20px;
+text-align: center;
+margin-bottom: 30px;
+}
+
