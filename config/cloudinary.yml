@@ -1,0 +1,20 @@
+---
+development:
+  cloud_name: dmer5xpee
+  api_key: '858952913912359'
+  api_secret: 2uN9NSH9aJrG5EL3N61P76i6dY0
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dmer5xpee
+  api_key: '858952913912359'
+  api_secret: 2uN9NSH9aJrG5EL3N61P76i6dY0
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dmer5xpee
+  api_key: '858952913912359'
+  api_secret: 2uN9NSH9aJrG5EL3N61P76i6dY0
+  enhance_image_tag: true
+  static_file_support: false
+
