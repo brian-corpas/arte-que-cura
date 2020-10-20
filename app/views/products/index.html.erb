@@ -1,7 +1,9 @@
 <div class="container">
     <% @products.each do |product| %>
       <div class="d-flex justify-content-center" style="margin-top: 15%">
+        <a href="<%= product_path(product.id) %>" class="stretched-link">
         <%= cl_image_tag product.photo.key, height: 400, width: 500, crop: :thumb %>
+        </a>
       </div>
          <div class="card-body">
            <div class="row d-flex justify-content-center">
