@@ -1,0 +1,26 @@
+
+<div class="container">
+      <div class="d-flex justify-content-center" style="margin-top: 15%">
+         <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :thumb %>
+      </div>
+      <div class="card-body">
+         <div class="row d-flex justify-content-center">
+           <h4 class="card-title"><%= @product.name %></h4>
+           <p class="card-text"><%= @product.description %></p>
+         </div>
+         <div style="margin-top: 25px">
+           <h6 class="card-text"><%= link_to "Classifica a tua experiência" %></h6>
+         </div>
+      </div>
+ </div>
+
+
+<div class="container mt-2" style="margin-bottom: 10%">
+  <div class="row d-flex justify-content-center">
+    <div class="col-align-self-center">
+      <div style="margin-top: 20%">
+            <%= link_to "Back", products_path, class: "btn btn-outline-dark"%>
+      </div>
+    </div>
+  </div>
+</div>
