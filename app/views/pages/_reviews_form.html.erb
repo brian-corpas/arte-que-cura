@@ -1,0 +1,6 @@
+<%= simple_form_for [product, review] do |f| %>
+  <h3>Write your review description</h3>
+  <%= f.input :description %>
+  <%= f.button :submit, "Enviar", class: "btn btn-outline-success" %>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<% end %>
