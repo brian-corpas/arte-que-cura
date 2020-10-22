@@ -13,4 +13,3 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:description)
   end
 end
-end
