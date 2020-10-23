@@ -8,10 +8,12 @@
            <h4 class="card-title"><%= @product.name %></h4>
            <p class="card-text"><%= @product.description %></p>
          </div>
-         <div style="margin-top: 25px">
-           <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
-             Add review
-          </span>
+         <div class="row d-flex justify-content-center">
+           <div style="margin-top: 35px">
+             <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
+               <button type="button" class="btn btn-outline-success">Adicione um comentário</button>
+            </span>
+           </div>
          </div>
       </div>
  </div>
@@ -22,7 +24,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="product-<%= @product.id%>titlelabel" >Fill in your review here: </h5>
+            <h5 class="modal-title" id="product-<%= @product.id%>titlelabel" >Escreva o seu comentário: </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
