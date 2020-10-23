@@ -8,6 +8,7 @@
            <h4 class="card-title"><%= @product.name %></h4>
            <p class="card-text"><%= @product.description %></p>
          </div>
+         <% if user_signed_in? %>
          <div class="row d-flex justify-content-center">
            <div style="margin-top: 35px">
              <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
@@ -15,10 +16,12 @@
             </span>
            </div>
          </div>
+         <% end %>
       </div>
  </div>
 
   <div class="review_box">
+    <h4>Comentários:</h4>
    <% @product.reviews.each do |review| %>
      <div class="row d-flex justify-content-center">
        <div class="card" style="width: 30rem;">
