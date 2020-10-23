@@ -16,14 +16,16 @@
 .review_box {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
+  margin-top: 10px;
   margin-bottom: 70px;
   justify-content: center;
 }
 
-.review_box h4{
-  font-family: 'Sansita Swashed', cursive;
+#comment_title h4{
+font-family: 'David Libre', serif;
+  font-weight: lighter;
   text-align: center;
   color: #951b80;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 30px;
 }

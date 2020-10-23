@@ -20,21 +20,29 @@
       </div>
  </div>
 
-  <div class="review_box">
-    <h4>Comentários:</h4>
-   <% @product.reviews.each do |review| %>
-     <div class="row d-flex justify-content-center">
-       <div class="card" style="width: 30rem;">
-         <div class="list-group list-group-flush">
-            <h5>O utilizador/a  <%= review.user.email %>  escreveu:</h5>
-           <li><%= review.description %></li>
-           <li><u><%= review.created_at %></u></li>
+ <div id="comment_title">
+   <h4>Comentários:</h4>
+ </div>
+
+<% if @product.reviews.nil? %>
+  <div class="row d-flex justify-content-center">
+   <h6>Este produto ainda não tem comentários</h6>
+  </div>
+<% else %>
+    <div class="review_box">
+     <% @product.reviews.each do |review| %>
+       <div class="row d-flex justify-content-center">
+         <div class="card" style="width: 30rem;">
+           <div class="list-group list-group-flush">
+              <h5>O utilizador/a <strong> <%= review.user.email %> </strong> escreveu:</h5>
+             <li><%= review.description %></li>
+             <li><u><%= review.created_at %></u></li>
+           </div>
          </div>
        </div>
-     </div>
-   <% end %>
-  </div>
-
+     <% end %>
+    </div>
+<% end %>
 <!-- REVIEWS MODAL -->
 
  <div class="modal fade" id="product-<%= @product.id%>" tabindex="-1" role="dialog" aria-labelledby="product-<%= @product.id%>titlelabel" aria-hidden="true">
@@ -63,7 +71,7 @@
 <div class="container mt-2" style="margin-bottom: 10%">
   <div class="row d-flex justify-content-center">
     <div class="col-align-self-center">
-      <div style="margin-top: 20%">
+      <div style="margin-top: 70%">
             <%= link_to "Back", products_path, class: "btn btn-outline-dark"%>
       </div>
     </div>
