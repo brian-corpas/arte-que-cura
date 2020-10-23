@@ -18,6 +18,19 @@
       </div>
  </div>
 
+  <div class="review_box">
+   <% @product.reviews.each do |review| %>
+     <div class="row d-flex justify-content-center">
+       <div class="card" style="width: 30rem;">
+         <div class="list-group list-group-flush">
+           <li><%= review.description %></li>
+           <li><u><%= review.created_at %></u></li>
+         </div>
+       </div>
+     </div>
+   <% end %>
+  </div>
+
 <!-- REVIEWS MODAL -->
 
  <div class="modal fade" id="product-<%= @product.id%>" tabindex="-1" role="dialog" aria-labelledby="product-<%= @product.id%>titlelabel" aria-hidden="true">
