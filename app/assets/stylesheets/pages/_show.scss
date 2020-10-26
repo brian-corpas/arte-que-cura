@@ -1,5 +1,5 @@
 .card {
-  background: rgba(246, 224, 208, .3);
+  background: rgba(179, 178, 56, .1);
   padding: 10px;
   text-align: left;
   margin-bottom: 15px;
@@ -16,14 +16,16 @@
 .review_box {
   display: flex;
   flex-direction: column;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   justify-content: center;
 }
 
-.review_box h4{
-  font-family: 'Sansita Swashed', cursive;
+#comment_title h4{
+font-family: 'David Libre', serif;
+  font-weight: lighter;
   text-align: center;
   color: #951b80;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-top: 70px;
 }

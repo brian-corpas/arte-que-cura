@@ -6,6 +6,7 @@
   width: auto;
 }
 
+
 .card-text {
   text-align: center;
 }
@@ -14,4 +15,18 @@
   font-family: 'David Libre', serif;
   font-weight: bold;
   font-size: 20px;
+}
+
+.review-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-top: 100px;
+  letter-spacing: 3px;
+  width: auto;
+}
+
+.review-box h3{
+  font-family: 'David Libre', serif;
+  padding-bottom: 15px;
 }
