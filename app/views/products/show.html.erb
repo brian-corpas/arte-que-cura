@@ -34,7 +34,11 @@
        <div class="row d-flex justify-content-center">
          <div class="card" style="width: 30rem;">
            <div class="list-group list-group-flush">
+            <% if current_user.first_name.present? && current_user.last_name.present? %>
+              <h5>O utilizador/a <%= review.user.first_name %> <%= review.user.last_name %> escreveu:</h5>
+            <% else %>
               <h5>O utilizador/a <strong> <%= review.user.email %> </strong> escreveu:</h5>
+            <% end %>
              <li><%= review.description %></li>
              <li><u><%= review.created_at %></u></li>
            </div>
