@@ -31,7 +31,7 @@
   <% current_user.reviews.each do |review| %>
     <div class="card" style="width: 30rem;">
       <div class="card-body">
-        <h5 class="card-title"><%= review.product.name %></h5>
+        <h5 class="card-title"><strong><%= review.product.name %></strong></h5>
         <p class="card-text"><%= review.description %></p>
         <%= link_to "Apagar comentário", product_review_path(current_user.id, review),
         method: :delete,
