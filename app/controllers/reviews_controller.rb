@@ -12,6 +12,16 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    @review = Review.find(params[:id])
+    if @review.destroy
+      redirect_to profile_path
+      flash[:notice] = "Comentário apagado"
+    else
+      flash[:notice] = "Comentário ainda não foi apagado"
+    end
+  end
+
   private
 
   def review_params

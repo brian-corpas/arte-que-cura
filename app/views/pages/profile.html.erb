@@ -11,6 +11,7 @@
      </div>
     </div>
 
+
     <div class="card text-center">
       <div class="card-header">
         As minhas compras:
@@ -21,4 +22,18 @@
       <div class="card-footer text-muted">
       </div>
     </div>
+</div>
+
+<div class="review-box">
+  <% current_user.reviews.each do |review| %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text"><%= review.description %></p>
+        <%= link_to "Apagar comentário", product_review_path(current_user.id, review),
+        method: :delete,
+        data: { confirm: "Tem a certeza?"} %>
+      </div>
+    </div>
+  <% end %>
 </div>
