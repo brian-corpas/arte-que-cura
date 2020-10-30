@@ -33,3 +33,13 @@ font-family: 'David Libre', serif;
   padding-bottom: 10px;
   padding-top: 70px;
 }
+
+
+@media only screen and (max-width: 768px) {
+.productshow {
+  grid-template-columns: 1fr;
+  padding: 3em;
+  grid-row-gap: 30px;
+}
+}
+
