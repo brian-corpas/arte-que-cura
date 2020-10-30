@@ -1,24 +1,28 @@
+ <div class="productshow">
+  <div class="container py-3" style="margin-top: 7%">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+           <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :thumb %>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <h1><%= @product.name %></h1>
+        <p><%= @product.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% if user_signed_in? %>
+   <div class="row d-flex justify-content-center">
+     <div style="margin-top: 100px">
+       <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
+         <button type="button" class="btn btn-outline-success">Adicione um comentário</button>
+      </span>
+     </div>
+   </div>
+<% end %>
 
-<div class="container">
-      <div class="d-flex justify-content-center" style="margin-top: 15%">
-         <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :thumb %>
-      </div>
-      <div class="card-body">
-         <div class="row d-flex justify-content-center">
-           <h4 class="card-title"><%= @product.name %></h4>
-           <p class="card-text"><%= @product.description %></p>
-         </div>
-         <% if user_signed_in? %>
-         <div class="row d-flex justify-content-center">
-           <div style="margin-top: 35px">
-             <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
-               <button type="button" class="btn btn-outline-success">Adicione um comentário</button>
-            </span>
-           </div>
-         </div>
-         <% end %>
-      </div>
- </div>
+
+
 
  <div id="comment_title">
    <h4>Comentários:</h4>
