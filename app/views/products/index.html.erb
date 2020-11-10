@@ -1,3 +1,11 @@
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag 'term', params[:term], placeholder: "Procure o seu produto" %>
+  <%= submit_tag 'Search!' %>
+<% end %>
+
+
+
+
 <div class="container">
     <% @products.each do |product| %>
       <div class="d-flex justify-content-center" style="margin-top: 15%">

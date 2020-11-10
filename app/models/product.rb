@@ -3,4 +3,6 @@ class Product < ApplicationRecord
 
   has_many :reviews
 
+  include PgSearch
+  pg_search_scope :search_by_full_name, against: [:name]
 end
