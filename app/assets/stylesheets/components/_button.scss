@@ -1,3 +1,23 @@
 #button-book {
   margin-top: 150px;
 }
+
+
+.btn-main {
+  color: $gray;
+  border: 2px solid $gray;
+  padding: 5px 7px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  letter-spacing: 3px;
+  font-weight: Semi-bold;
+  border-radius: 4px;
+}
+
+.btn-main:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: $black;
+  border: 2px solid $black;
+  border-radius: 4px;
+}
