@@ -1,0 +1,30 @@
+<div class="container" style="margin-top: 10%">
+  <div class="row py-4">
+    <div class="col-md-3"><%= cl_image_tag @order.product.photo.key, width: '100%' %></div>
+    <div class="col">
+      <h1>Checkout summary</h1>
+      <p>Compra de <strong><%= @order.product.name %></strong> por <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+      <button id="pay" class="btn btn-primary">Pagar</button>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const paymentButton = document.getElementById('pay');
+        paymentButton.addEventListener('click', () => {
+          const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+          stripe.redirectToCheckout({
+            sessionId: '<%= @order.checkout_session_id %>'
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2" style="margin-bottom: 10%">
+  <div class="row d-flex justify-content-center">
+    <div class="col-align-self-center">
+      <div style="margin-top: 30%">
+            <%= link_to "Back", products_path, class: "btn btn-outline-dark"%>
+      </div>
+    </div>
+  </div>
+</div>
