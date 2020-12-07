@@ -17,7 +17,14 @@
         As minhas compras:
       </div>
       <div class="card-body">
-      <h5 class="card-title">Ainda não efectuou nenhuma compra</h5>
+        <div class="card" style="width: 40rem;">
+          <ul class="list-group list-group-flush">
+            <% current_user.orders.each do |order| %>
+              <li class="list-group-item"><%= order.product.name %></li>
+            <% end %>
+          </ul>
+        </div>
+
       </div>
       <div class="card-footer text-muted">
       </div>
