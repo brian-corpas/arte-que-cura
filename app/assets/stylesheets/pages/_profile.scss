@@ -4,7 +4,7 @@
   margin-top: 100px;
   letter-spacing: 3px;
   width: auto;
-  height: 50%;
+  height: 20%;
 }
 
 .shopping-box {
@@ -13,6 +13,11 @@
   margin-top: 100px;
   letter-spacing: 3px;
   width: auto;
+}
+
+.coments_info {
+  display: flex;
+  flex-direction: column;
 }
 
 .all-profile-boxes {

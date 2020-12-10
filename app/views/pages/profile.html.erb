@@ -1,5 +1,6 @@
 
 <div class="all-profile-boxes">
+  <div class="comentsandinfo">
     <div class="profile-box">
       <div class="card border-light mb-3" style="max-width: 18rem;">
         <% if current_user.first_name.present? %>
@@ -13,6 +14,22 @@
          </div>
         </div>
     </div>
+
+    <div class="review-box">
+      <h3>Os meus comentários:</h3>
+      <% current_user.reviews.each do |review| %>
+        <div class="card" style="width: 30rem;">
+          <div class="card-body">
+            <h5 class="card-title"><strong><%= review.product.name %></strong></h5>
+            <p class="card-text"><%= review.description %></p>
+            <%= link_to "Apagar comentário", product_review_path(current_user.id, review),
+            method: :delete,
+            data: { confirm: "Tem a certeza?"} %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
     <div class="shopping-box">
         <div class="card text-center">
@@ -37,17 +54,3 @@
 </div>
 
 
-<div class="review-box">
-  <h3>Os meus comentários:</h3>
-  <% current_user.reviews.each do |review| %>
-    <div class="card" style="width: 30rem;">
-      <div class="card-body">
-        <h5 class="card-title"><strong><%= review.product.name %></strong></h5>
-        <p class="card-text"><%= review.description %></p>
-        <%= link_to "Apagar comentário", product_review_path(current_user.id, review),
-        method: :delete,
-        data: { confirm: "Tem a certeza?"} %>
-      </div>
-    </div>
-  <% end %>
-</div>
