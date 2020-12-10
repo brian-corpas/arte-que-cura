@@ -15,6 +15,11 @@
   width: auto;
 }
 
+.coments_info {
+  display: flex;
+  flex-direction: column;
+}
+
 .all-profile-boxes {
   display: flex;
   justify-content: space-evenly;

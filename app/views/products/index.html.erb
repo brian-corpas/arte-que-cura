@@ -11,15 +11,21 @@
 <div class="container">
     <% @products.each do |product| %>
       <div class="d-flex justify-content-center" style="margin-top: 15%">
+        <div class="image-box">
         <%= link_to product_path(product.id) do %>
           <%= cl_image_tag product.photo.key, height: 400, width: 500, crop: :thumb %>
         <% end %>
+        </div>
       </div>
          <div class="card-body">
-           <div class="row d-flex justify-content-center">
-             <h4 class="card-title"><%= product.name %></h4>
-             <p class="card-text"><%= product.description %></p>
-             <p>Preço: <%= humanized_money_with_symbol(product.price) %></p>
+           <div class="justify-content-center">
+
+               <h4 class="card-title"><%= product.name %></h4>
+
+               <p class="card-text"><%= product.description %></p>
+
+               <h6 class="card-text" style="justify-content: center">Preço: <%= humanized_money_with_symbol(product.price) %></h6>
+
            </div>
          </div>
     <% end %>
