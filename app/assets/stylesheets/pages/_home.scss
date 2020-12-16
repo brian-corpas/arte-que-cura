@@ -9,6 +9,9 @@ body {
   display: block;
   position: relative;
   margin-top: 75px;
+  animation: fadeIn;
+  animation-duration: 5s;
+
 }
 
 .presentation_text p {
@@ -16,5 +19,7 @@ font-family: 'Sansita Swashed', cursive;
 font-size: 20px;
 text-align: center;
 margin-bottom: 30px;
+animation: fadeIn;
+animation-duration: 10s;
 }
 
