@@ -42,6 +42,8 @@ gem 'stripe_event'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
 
+gem 'animate.css-rails', '~> 3.2.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
