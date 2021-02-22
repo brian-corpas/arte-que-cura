@@ -40,7 +40,7 @@ gem 'stripe'
 gem 'stripe_event'
 
 gem 'remotipart', github: 'mshibuya/remotipart'
-gem 'rails_admin', '>= 1.0.0.rc'
+gem 'rails_admin', '>= 2.0.2'
 
 gem 'animate.css-rails', '~> 3.2.0'
 
