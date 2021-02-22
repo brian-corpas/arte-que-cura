@@ -337,7 +337,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
-  rails_admin (>= 1.0.0.rc)
+  rails_admin (>= 2.0.2)
   redis (~> 4.0)
   remotipart!
   sass-rails (>= 6)
