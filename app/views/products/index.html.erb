@@ -9,7 +9,7 @@
 
 
 <div class="container">
-    <% @products.each do |product| %>
+    <% @products.order('name ASC').each do |product| %>
       <div class="d-flex justify-content-center" style="margin-top: 15%">
         <div class="image-box">
         <%= link_to product_path(product.id) do %>
