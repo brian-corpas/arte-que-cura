@@ -7,10 +7,12 @@
       <div class="col-sm-12 col-md-6">
         <h1><%= @product.name %></h1>
         <p><%= @product.description %></p>
+        <br>
+        <p><%= @product.extended_description %></p>
         <p>Preço: <%= humanized_money_with_symbol(@product.price) %></p>
         <%= form_tag orders_path do %>
           <%= hidden_field_tag 'product_id', @product.id %>
-          <%= submit_tag 'Comprar', class: 'btn btn-outline-primary' %>
+          <%= submit_tag 'Comprar', class: 'btn btn-success' %>
         <% end %>
       </div>
     </div>
@@ -20,7 +22,7 @@
    <div class="row d-flex justify-content-center">
      <div style="margin-top: 100px">
        <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
-         <button type="button" class="btn btn-outline-success">Adicione um comentário</button>
+         <button type="button" class="btn btn-outline-success btn-sm">Adicione um comentário</button>
       </span>
      </div>
    </div>
