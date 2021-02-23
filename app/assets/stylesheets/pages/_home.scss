@@ -23,3 +23,12 @@ animation: fadeIn;
 animation-duration: 10s;
 }
 
+@media screen and (max-width: 600px) {
+  .logopic {
+    max-width: 30%;
+    height: auto;
+    position: relative;
+    display: block;
+  }
+}
+

@@ -7,9 +7,9 @@
 
 
 
-
 <div class="container">
-  <div class="row">
+
+ <div class="row">
     <% @products.order('name ASC').each do |product| %>
      <div class="column">
       <div class="d-flex justify-content-center" style="margin-top: 15%">
@@ -32,7 +32,7 @@
          </div>
        </div>
     <% end %>
-    </div>
+  </div>
  </div>
 
 
