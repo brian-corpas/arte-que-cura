@@ -4,6 +4,14 @@
     <div class="col">
       <h1>Checkout summary</h1>
       <p>Compra de <strong><%= @order.product.name %></strong> por <strong><%= humanized_money_with_symbol @order.amount %></strong></p>
+        <p>Purchase of:</p>
+      <ul>
+        <% @order.line_items.each do |item| %>
+          <li><strong><%=item.quantity%> x <%= item.product.name %></strong> for <strong><%= humanized_money_with_symbol(item.product.price_cents) %></strong></li>
+        <% end %>
+      </ul>
+
+
       <button id="pay" class="btn btn-primary">Pagar</button>
       <script src="https://js.stripe.com/v3/"></script>
       <script>
