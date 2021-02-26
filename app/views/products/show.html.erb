@@ -10,16 +10,18 @@
         <br>
         <p><%= @product.extended_description %></p>
         <p>Preço: <%= humanized_money_with_symbol(@product.price) %></p>
+        <%= button_to "Adicionar ao carrinho", line_items_path(product_id: @product.id), class: 'btn btn-success' %>
+
+        <!--
         <%= form_tag orders_path do %>
           <%= hidden_field_tag 'product_id', @product.id %>
           <%= submit_tag 'Comprar', class: 'btn btn-success' %>
-        <% end %>
+        <% end %> -->
       </div>
     </div>
   </div>
 </div>
 
-  <%= button_to "Add to cart", line_items_path(product_id: @product.id), class: 'btn btn-primary' %>
 
 <% if user_signed_in? %>
    <div class="row d-flex justify-content-center">
