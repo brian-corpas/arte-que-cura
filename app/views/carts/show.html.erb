@@ -1,7 +1,8 @@
 <h2>Cart show</h2>
 <ul>
   <% @cart.line_items.each do |line_item| %>
-    <li>Item: <%= line_item.product.name %>/ Price: <%= number_to_currency(line_item.product.price) %>/ Quantity: <%= line_item.quantity %>/ Total Price: <%= number_to_currency(line_item.total_price) %></li>
+     <%= cl_image_tag line_item.product.photo.key, height: 100, width: 200, crop: :thumb %>
+    <li>Item: <%= line_item.product.name %>/ Price: <%= humanized_money_with_symbol(line_item.product.price) %>/ Quantity: <%= line_item.quantity %></li>
     <ul>
       <li>
         <%= link_to "Add one", line_item_add_path(line_item), method: :post %>
@@ -13,7 +14,7 @@
     </ul>
   <% end %>
 </ul>
-<h3>Sub total: <%= number_to_currency(@cart.sub_total) %></h3>
+<h3>Sub total: <%= humanized_money_with_symbol(@cart.sub_total) %></h3>
 <%= form_tag orders_path do %>
   <%= hidden_field_tag 'cart_id', @cart.id %>
   <%= submit_tag 'Checkout', class: 'btn btn-primary' %>
