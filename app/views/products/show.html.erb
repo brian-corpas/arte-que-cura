@@ -18,6 +18,9 @@
     </div>
   </div>
 </div>
+
+  <%= button_to "Add to cart", line_items_path(product_id: @product.id), class: 'btn btn-primary' %>
+
 <% if user_signed_in? %>
    <div class="row d-flex justify-content-center">
      <div style="margin-top: 100px">
