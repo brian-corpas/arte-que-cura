@@ -4,7 +4,7 @@ class Order < ApplicationRecord
 
   has_many :line_items, dependent: :destroy
 
-  monetize :amount_cents
+  #monetize :amount_cents
 
   def sub_total
     sum = 0
