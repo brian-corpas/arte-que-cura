@@ -39,10 +39,15 @@
            <div class="card-body">
             <div class="card" style="width: 40rem;">
               <ul class="list-group list-group-flush">
-                <% current_user.orders.each do |order| %>
-                  <li class="list-group-item"><%= order.product.name %>
-                    <p><i>Comprado</i> a:<%= order.created_at %></p>
+                <% current_user.orders.order('created_at DESC').each do |order| %>
+                  <li class="list-group-item">
+                    <% order.line_items.each do |item| %>
+                      <%= item.product.name %>
+                      <p>Qt:<%= item.quantity %></p>
+                   <% end %>
+                   <h6>Total: <%= humanized_money_with_symbol(order.sub_total) %></h6>
                   </li>
+                   <p><i>Comprado</i> a:<%= order.created_at %></p>
                 <% end %>
               </ul>
             </div>

@@ -1,10 +1,6 @@
-class Order < ApplicationRecord
-  belongs_to :user
-  #belongs_to :product
-
+class Cart < ApplicationRecord
   has_many :line_items, dependent: :destroy
-
-  #monetize :amount_cents
+  has_many :products, through: :line_items
 
   def sub_total
     sum = 0

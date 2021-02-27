@@ -5,6 +5,6 @@ class Product < ApplicationRecord
 
   monetize :price_cents
 
-  include PgSearch
+  include PgSearch::Model
   pg_search_scope :search_by_full_name, against: [:name]
 end

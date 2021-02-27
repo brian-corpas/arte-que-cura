@@ -1,15 +1,37 @@
 <div class="container" style="margin-top: 5%">
   <div class="row py-4">
-    <div class="col-md-3"><%= cl_image_tag @order.product.photo.key, width: '100%' %></div>
+    <div class="col-md-3"></div>
     <div class="col">
       <h1>Order #<%= @order.id %> <small><span class="badge badge-primary"><%= @order.state %></span></small></h1>
-      <ul class="list-unstyled">
-        <li><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></li>
-        <li><strong>PRODUCT</strong> <%= @order.product.name %> [<%= @order.product.name %>]</li>
-        <li><strong>TOTAL</strong> <%= humanized_money_with_symbol @order.amount %></li>
-        </li>
-      </ul>
-      <p>Estimated delivery in <strong>2 business days</strong></p>
+
+        <h3><strong>ISSUED ON</strong> <%= @order.created_at.to_date %></h3>
+            <h2>TOTAL: <%=  humanized_money_with_symbol(@order.sub_total) %></h2>
+          <div class="show_box">
+           <div class="items_display">
+             <% @order.line_items.each do |item| %>
+
+             <ul>
+               <table class="table-light">
+                <th>
+                 <%= cl_image_tag item.product.photo.key, height: 100, width: 200, crop: :thumb %>
+                <ul>Artigo: <%= item.product.name %></ul>
+                <ul>Preço: <%= humanized_money_with_symbol(item.product.price) %></ul>
+                <ul>Quantidade: <%= item.quantity %></ul>
+                </th>
+                </table>
+             </ul>
+
+             <% end %>
+             </div>
+           <div class="sub_total">
+             <p><strong>Nome:</strong> <%= current_user.first_name %> <%= current_user.last_name %></p>
+             <p><strong>Morada:</strong> <%= current_user.address %></p>
+             <p><strong>Telefone:</strong> <%= current_user.phone_number %></p>
+             <p><strong>E-Mail:</strong> <%= current_user.email %></p>
+           </div>
+          </div>
+            <br>
+      <h5>Obrigado pela sua compra; irá ser contactado(a) com a confirmação e informações sobre o envio</h5>
     </div>
   </div>
 </div>

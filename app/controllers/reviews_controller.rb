@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     if @review.save
       flash[:alert] = "Comentário registado."
-      redirect_to products_path
+      redirect_to product_path(@product.id)
     else
       flash[:alert] = "Por favor, repita novamente."
     end
