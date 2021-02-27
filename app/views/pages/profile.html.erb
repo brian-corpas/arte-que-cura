@@ -39,7 +39,7 @@
            <div class="card-body">
             <div class="card" style="width: 40rem;">
               <ul class="list-group list-group-flush">
-                <% current_user.orders.each do |order| %>
+                <% current_user.orders.order('created_at DESC').each do |order| %>
                   <li class="list-group-item">
                     <% order.line_items.each do |item| %>
                       <%= item.product.name %>
