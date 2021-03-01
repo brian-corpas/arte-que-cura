@@ -27,18 +27,13 @@
                <p class="card-text"><%= product.description %></p>
 
                <h6 class="card-text" style="justify-content: center">Preço: <%= humanized_money_with_symbol(product.price) %></h6>     
-               <p><small>Tags: <%= raw product.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> </small</p>
+               <p>Categoria: <%= raw product.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> </p>
            </div>
          </div>
        </div>
     <% end %>
   </div>
  </div>
-
-
-
-
-
 </div>
 
 <div class="container mt-2" style="margin-bottom: 10%">
