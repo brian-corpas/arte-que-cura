@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
   def index
     if params[:term]
       @products = Product.search_by_full_name(params[:term])
+    elsif
+      params[:tag] ? @products = Product.tagged_with(params[:tag]) : @products = Product.all
     else
       @products = Product.all
     end
