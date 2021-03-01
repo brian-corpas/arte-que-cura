@@ -8,8 +8,14 @@
 require "open-uri"
 
 Product.destroy_all
+Tag.destroy_all
 
 puts 'Creating seeds'
+
+Tag.create(name: "Saboaria")
+Tag.create(name: "Sólidos")
+Tag.create(name: "Cosmética Facial")
+Tag.create(name: "Corpo")
 
 product = Product.create(
   name: 'Hidratante Corporal em Barra',
