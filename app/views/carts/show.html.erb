@@ -3,6 +3,11 @@
 <div class="row d-flex justify-content-center" style="margin-bottom: 5%">
   <h2>O meu Carrinho</h2>
 </div>
+<% if @cart.line_items.empty?  %>
+ <div class="empty_cart">
+   <h4>O seu Carrinho está vazio</h4>
+ </div>
+ <% else %>
 <div class="show_box">
    <div class="items_display">
       <% @cart.line_items.each do |line_item| %>
@@ -35,6 +40,17 @@
         <%= submit_tag 'Checkout', class: 'btn btn-success' %>
       <% end %>
       <br>
-      <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
+      <%= link_to "Limpar", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %>
     </div>
+</div>
+<% end %>
+
+<div class="container mt-2" style="margin-bottom: 10%">
+  <div class="row d-flex justify-content-center">
+    <div class="col-align-self-center">
+      <div style="margin-top: 30%">
+            <%= link_to "Produtos", products_path, class: "btn btn-outline-dark"%>
+      </div>
+    </div>
+  </div>
 </div>

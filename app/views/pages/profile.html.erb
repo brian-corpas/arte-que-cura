@@ -2,18 +2,23 @@
 <div class="all-profile-boxes">
   <div class="comentsandinfo">
     <div class="profile-box">
-      <div class="card border-light mb-3" style="max-width: 18rem;">
+         <div class="card">
+
         <% if current_user.first_name.present? %>
           <div class="card-header"><%= "Bem-vindo #{current_user.first_name.capitalize}!" %></div>
         <% else %>
           <div class="card-header"><%= "Bem-vindo #{current_user.email}!" %></div>
         <% end %>
-          <div class="card-body">
-        <!-- <h5 class="card-title">Light card title</h5> -->
-            <p class="card-text"><%= link_to "Actualizar Info Pessoal", edit_user_registration_path, class: "text-secondary" %></p>
+          <div class="card-body">      
+            <p><u>Nome</u>: <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <p><u>Morada</u>: <%= current_user.address %></p>
+            <p><u>Contacto Tel.</u>: <%= current_user.phone_number %></p>
+            <p><u>E-Mail</u>: <%= current_user.email %></p>
+          
+            <p class="card-text" style="margin-top: 20%"><%= link_to "Actualizar Info Pessoal", edit_user_registration_path, class: "text-secondary" %></p>
          </div>
         </div>
-    </div>
+      </div>
 
     <div class="review-box">
       <h3>Os meus comentários:</h3>
@@ -57,5 +62,6 @@
         </div>
     </div>
 </div>
-
+</div>
+</div>
 

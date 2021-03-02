@@ -30,6 +30,13 @@
               });
             });
           </script>
+          <div class="user_info">
+            <p><u>Nome</u>: <%= current_user.first_name %> <%= current_user.last_name %></p>
+            <p><u>Morada</u>: <%= current_user.address %></p>
+            <p><u>Contacto Tel.</u>: <%= current_user.phone_number %></p>
+            <p><u>E-Mail</u>: <%= current_user.email %></p>
+          </div>
+
           <div class="extra_info">
             <h6>Se ainda não introduziu os seus dados, por favor faça-o aqui:</h6>
               <%= link_to "Actualizar Info Pessoal", edit_user_registration_path, class: "btn btn-light" %>
@@ -50,7 +57,7 @@
   <div class="row d-flex justify-content-center">
     <div class="col-align-self-center">
       <div style="margin-top: 30%">
-            <%= link_to "Back", products_path, class: "btn btn-outline-dark"%>
+            <%= link_to "Produtos", products_path, class: "btn btn-outline-dark"%>
       </div>
     </div>
   </div>
