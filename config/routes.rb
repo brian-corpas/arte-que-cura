@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show] do
     resources :reviews, only: [:create, :destroy]
   end
+  
+  get 'tags/:tag', to: 'products#index', as: :tag
+
 
   post 'line_items/:id/add', to: 'line_items#add_quantity', as: 'line_item_add'
   post 'line_items/:id/reduce', to: 'line_items#reduce_quantity', as: 'line_item_reduce'
