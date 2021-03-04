@@ -11,7 +11,7 @@
         <p><%= @product.extended_description %></p>
         <p>Preço: <%= humanized_money_with_symbol(@product.price) %></p>
         <p>Tags: <%= raw @product.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-        <%= button_to "Adicionar ao carrinho", line_items_path(product_id: @product.id), class: 'btn btn-success' %>
+        <%= button_to "Adicionar ao carrinho", line_items_path(product_id: @product.id), class: 'btn-green btn-sm' %>
 
         <!--
         <%= form_tag orders_path do %>
@@ -28,7 +28,7 @@
    <div class="row d-flex justify-content-center">
      <div style="margin-top: 100px">
        <span id="button-book" style="z-index: 2" data-toggle="modal" data-target="#product-<%= @product.id %>">
-         <button type="button" class="btn btn-outline-success btn-sm">Adicione um comentário</button>
+         <button type="button" class="btn-purple btn-sm">Adicione um comentário</button>
       </span>
      </div>
    </div>

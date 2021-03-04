@@ -21,3 +21,50 @@
   border: 2px solid $black;
   border-radius: 4px;
 }
+
+.btn-green {
+  color: white;
+  padding: 8px 17px;
+  border-radius: 4px;
+  background: #B5CA8D;
+  transition: background 0.3s ease;
+  letter-spacing: 4px;
+  font-weight: Semi-bold;
+}
+
+.btn-green:hover {
+  background: #8BB174;
+  color: white;
+}
+
+
+.btn-purple {
+  color: #9534a4;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border-color: #9534a4 ;
+  background:rgba(255,255,255, 0.1);
+  transition: background 0.3s ease;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.btn-purple:hover {
+  background: #9534a4;
+  color: white;
+}
+
+.btn-red {
+  color: white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: #d61b1e;
+  transition: background 0.3s ease;
+  letter-spacing: 4px;
+  font-weight: Semi-bold;
+}
+
+.btn-green:hover {
+  background: #9b1b1e;
+  color: white;
+}
