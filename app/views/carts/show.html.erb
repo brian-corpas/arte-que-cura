@@ -20,8 +20,8 @@
         <ul>Quantidade: <%= line_item.quantity %></ul>
         <ul>
           <li>
-            <%= link_to "+1 unidade", line_item_add_path(line_item), method: :post %>
-            <%= link_to "-1 unidade", line_item_reduce_path(line_item), method: :post %>
+            <%= link_to "+1", line_item_add_path(line_item), method: :post, class: "btn btn-light" %>
+            <%= link_to "-1", line_item_reduce_path(line_item), method: :post, class: "btn btn-light" %>
           </li>
           <li>
             <%= link_to "Remover item", line_item_path(line_item), method: :delete %>
