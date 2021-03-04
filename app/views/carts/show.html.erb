@@ -18,10 +18,10 @@
         <ul>Artigo: <%= line_item.product.name %></ul>
         <ul>Preço: <%= humanized_money_with_symbol(line_item.product.price) %></>
         <ul>Quantidade: <%= line_item.quantity %></ul>
-        <ul>
+        <ul style="list-style-type:circle">
           <li>
-            <%= link_to "+1 unidade", line_item_add_path(line_item), method: :post %>
-            <%= link_to "-1 unidade", line_item_reduce_path(line_item), method: :post %>
+            <%= link_to "+1", line_item_add_path(line_item), method: :post, class: "btn-grey btn-sm" %>
+            <%= link_to "-1", line_item_reduce_path(line_item), method: :post, class: "btn-grey btn-sm" %>
           </li>
           <li>
             <%= link_to "Remover item", line_item_path(line_item), method: :delete %>
@@ -37,10 +37,10 @@
       <h3>Sub total: <%= humanized_money_with_symbol(@cart.sub_total) %></h3>
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'cart_id', @cart.id %>
-        <%= submit_tag 'Checkout', class: 'btn btn-success' %>
+        <%= submit_tag 'Checkout', class: 'btn-green' %>
       <% end %>
       <br>
-      <%= link_to "Limpar", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %>
+      <%= link_to "Limpar", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"}, class: 'btn-red' %>
     </div>
 </div>
 <% end %>
