@@ -64,7 +64,17 @@
   font-weight: Semi-bold;
 }
 
-.btn-green:hover {
+.btn-red:hover {
   background: #9b1b1e;
   color: white;
+}
+
+.btn-grey {
+  color: black;
+  background: lightgrey;
+}
+
+.btn-grey:hover {
+  color: black;
+  background: darkgrey;
 }

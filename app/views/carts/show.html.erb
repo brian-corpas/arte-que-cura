@@ -18,10 +18,10 @@
         <ul>Artigo: <%= line_item.product.name %></ul>
         <ul>Preço: <%= humanized_money_with_symbol(line_item.product.price) %></>
         <ul>Quantidade: <%= line_item.quantity %></ul>
-        <ul>
+        <ul style="list-style-type:circle">
           <li>
-            <%= link_to "+1", line_item_add_path(line_item), method: :post, class: "btn btn-outline-secondary btn-sm" %>
-            <%= link_to "-1", line_item_reduce_path(line_item), method: :post, class: "btn btn-outline-secondary btn-sm" %>
+            <%= link_to "+1", line_item_add_path(line_item), method: :post, class: "btn-grey btn-sm" %>
+            <%= link_to "-1", line_item_reduce_path(line_item), method: :post, class: "btn-grey btn-sm" %>
           </li>
           <li>
             <%= link_to "Remover item", line_item_path(line_item), method: :delete %>
