@@ -4,9 +4,10 @@
 <div class="row d-flex justify-content-center" style="margin-top: 5%">
   <h2>O meu Carrinho</h2>
 </div>
+
 <% if @cart.line_items.empty?  %>
  <div class="empty_cart">
-   <h4>O seu Carrinho está vazio</h4>
+   <h3>O seu Carrinho está vazio</h3>
  </div>
  <% else %>
 <div class="show_box" style="margin-top: 5%">
@@ -49,7 +50,7 @@
 <div class="container mt-2" style="margin-bottom: 10%">
   <div class="row d-flex justify-content-center">
     <div class="col-align-self-center">
-      <div style="margin-top: 90%">
+      <div style="margin-top: 15em">
             <%= link_to "Produtos", products_path, class: "btn btn-outline-dark"%>
       </div>
     </div>
