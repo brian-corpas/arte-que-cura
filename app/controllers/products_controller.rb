@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+     @products = Product.paginate(page: params[:page])
   end
 
   def show
