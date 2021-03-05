@@ -14,7 +14,7 @@
 
 .indexfullpage::after {
   content: "";
-  background-image: url(/assets/logocuttransparent.png);
+  background-image: url(asset_path("logocuttransparent.png"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1000px 1000px;
