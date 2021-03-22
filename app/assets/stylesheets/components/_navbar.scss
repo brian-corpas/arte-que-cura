@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-image: #951B80;
+  //background-image: rgba(250, 250, 250, 0.7);
+  background-color: rgba(250, 250, 250, 0.7);
+  z-index: 1;
 }
 
 
@@ -14,7 +16,7 @@
 
 .navbar-options li {
   font-family: 'Sansita Swashed', cursive;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 20px;
 }
 
