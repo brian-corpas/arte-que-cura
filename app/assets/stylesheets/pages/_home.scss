@@ -39,6 +39,7 @@ z-index: 1;
 
 body {
   overflow-x: hidden;
+  
 }
 
 .triangles {
@@ -48,7 +49,7 @@ body {
   transform: rotate(22.5deg) translateZ(1px);
   z-index: -1;
   opacity: 0.8;
-  
+
 }
 .img {
   width: 65vw;
