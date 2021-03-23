@@ -3,14 +3,11 @@ body {
     background-color: linear-gradient(#f4d9c6, white, #f4d9c6);
 }
 
-.cart {
-  margin-top: 7px;
-  margin-right: 20px;
-}
+
 
 .logopic {
   text-align: center;
-  margin: auto 42px;
+ // margin: auto 42px;
   display: block;
   position: relative;
   margin-top: 85px;
@@ -41,8 +38,7 @@ z-index: 1;
 
 
 body {
-  overflow: auto;
-
+  overflow-x: hidden;
 }
 
 .triangles {
@@ -66,7 +62,7 @@ body {
           animation: shift 12s infinite linear;
   will-change: tansform;
   z-index: -1;
-  
+
 }
 @-webkit-keyframes shift {
   to {
@@ -100,42 +96,4 @@ body {
   transform: rotate(-315deg) rotateX(180deg);
 }
 
-.content {
-  position: absolute;
-  text-outline: 0;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  height: 100vh;
-  padding-left: 100px;
-}
-
-.content-width {
-  width: 500px;
-}
-
-.highlight {
-  display: inline;
-  padding: 0.25em 0;
-  background: #111;
-  box-shadow: 0.4em 0 0 #111, -0.4em 0 0 #111;
-  border-radius: 4px;
-  -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-}
-
-.below-title {
-  padding-top: 20px;
- text-align: center;
-}
-
-.title {
-  font: 900 2.25rem/1.5 Roboto, sans-serif;
-  color: white;
-}
-
-.subtitle {
-  font: 1rem/1.85 Roboto, sans-serif;
-  color: #bbb;
-}
 
