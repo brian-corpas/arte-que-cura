@@ -3,29 +3,28 @@ body {
     background-color: linear-gradient(#f4d9c6, white, #f4d9c6);
 }
 
-.cart {
-  margin-top: 7px;
-  margin-right: 20px;
-}
+
 
 .logopic {
   text-align: center;
-  margin: auto 42px;
+ // margin: auto 42px;
   display: block;
   position: relative;
-  margin-top: 75px;
+  margin-top: 85px;
   animation: fadeIn;
   animation-duration: 5s;
-
+  z-index: 1;
 }
 
 .presentation_text p {
 font-family: 'Sansita Swashed', cursive;
-font-size: 20px;
+font-size: 25px;
+font-weight: lighter;
 text-align: center;
 margin-bottom: 30px;
 animation: fadeIn;
 animation-duration: 10s;
+z-index: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -36,4 +35,66 @@ animation-duration: 10s;
     display: block;
   }
 }
+
+
+body {
+  overflow-x: hidden;
+  
+}
+
+.triangles {
+  position: absolute;
+  top: calc(50% - 49.92vw);
+  left: calc(50% - 49.92vw);
+  transform: rotate(22.5deg) translateZ(1px);
+  z-index: -1;
+  opacity: 0.8;
+
+}
+.img {
+  width: 65vw;
+  height: 53.82vw;
+  position: absolute;
+  -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+          clip-path: polygon(100% 50%, 0 0, 0 100%);
+  background: url(https://images.unsplash.com/photo-1609088810733-c3b2eb8df983?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fG5hdHVyZSUyMGJhY2tncm91bmR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60) right center/200%;
+  transform-origin: 64.5vw center;
+  -webkit-animation: shift 12s infinite linear;
+          animation: shift 12s infinite linear;
+  will-change: tansform;
+  z-index: -1;
+
+}
+@-webkit-keyframes shift {
+  to {
+    background-position: 300% center;
+  }
+}
+@keyframes shift {
+  to {
+    background-position: 300% center;
+  }
+}
+.img--2 {
+  transform: rotate(-45deg) rotateX(180deg);
+}
+.img--3 {
+  transform: rotate(-90deg);
+}
+.img--4 {
+  transform: rotate(-135deg) rotateX(180deg);
+}
+.img--5 {
+  transform: rotate(-180deg);
+}
+.img--6 {
+  transform: rotate(-225deg) rotateX(180deg);
+}
+.img--7 {
+  transform: rotate(-270deg);
+}
+.img--8 {
+  transform: rotate(-315deg) rotateX(180deg);
+}
+
 
