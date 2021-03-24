@@ -1,0 +1,34 @@
+.footer {
+    position: relative;
+    margin-top: 405px;
+    bottom:0;
+    flex-shrink: 0;
+    width: 100%;
+    padding-top: 16px;
+    background-color: #d8ebe4;
+    font-size: 15px;
+    height: 90px;
+
+
+    a {
+      color: #9534a4;
+      padding: 0 15px;
+      font-size: 18px;
+      &:hover {
+        color: #9534a4;
+        text-decoration: none;
+      }
+    }
+}
+
+.footer-section-contact {
+  p {
+    margin-bottom: 6px;
+  }
+}
+
+.footer-section-social-media {
+  .social-media-links {
+    padding-top: 20px;
+  }
+}
