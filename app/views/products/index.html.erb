@@ -26,11 +26,11 @@
          <div class="card-body">
            <div class="justify-content-center">
 
-               <h4 class="card-title"><%= product.name %></h4>
+               <h3 class="card-title"><%= product.name %></h3>
 
-               <p class="card-text"><%= product.description %></p>
+               <h6 class="card-text"><%= product.description %></h6>
 
-               <h6 class="card-text" style="justify-content: center">Preço: <%= humanized_money_with_symbol(product.price) %></h6>     
+               <h5 class="card-text" style="justify-content: center"><u>Preço</u>: <%= humanized_money_with_symbol(product.price) %></h5>     
                <p>Categoria:<strong> <%= raw product.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %> </strong </p>
            </div>
          </div>
