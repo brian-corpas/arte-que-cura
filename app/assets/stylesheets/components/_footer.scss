@@ -1,14 +1,15 @@
 .footer {
+   
     position: relative;
-    margin-top: 405px;
+    margin-top: auto;
     bottom:0;
     flex-shrink: 0;
     width: 100%;
     padding-top: 16px;
-    background-color: #d8ebe4;
+    background-color: #beca5c;
     font-size: 15px;
     height: 90px;
-
+    
 
     a {
       color: #9534a4;
@@ -19,6 +20,12 @@
         text-decoration: none;
       }
     }
+}
+
+.page-id-0 .footer {
+  
+    display: none;
+
 }
 
 .footer-section-contact {

@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-body {
+/* body {
     background-color: linear-gradient(#f4d9c6, white, #f4d9c6);
-}
+} */
 
 
 
@@ -17,6 +17,7 @@ body {
 }
 
 .presentation_text p {
+color: #f3f4ed;
 font-family: 'Sansita Swashed', cursive;
 font-size: 25px;
 font-weight: lighter;
@@ -39,7 +40,7 @@ z-index: 1;
 
 body {
   overflow-x: hidden;
-  
+  position: relative;
 }
 
 .triangles {
@@ -98,3 +99,6 @@ body {
 }
 
 
+.homepage .footer {
+  display: none;
+}
