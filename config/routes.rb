@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   get "profile", to: "pages#profile", as: "profile"
 
-  resources :orders, only: [:show, :create] do
+  resources :orders, only: [:index, :show, :create] do
     resources :payments, only: :new
   end
 
