@@ -39,10 +39,11 @@ gem 'pg_search'
 gem 'money-rails'
 gem 'stripe'
 gem 'stripe_event'
-
+gem 'letter_opener', group: :development
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 2.0.2'
 gem 'animate.css-rails', '~> 3.2.0'
+gem 'postmark-rails'
 
 group :development, :test do
   gem 'pry-byebug'
