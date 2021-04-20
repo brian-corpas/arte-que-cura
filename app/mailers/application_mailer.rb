@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'artequecura@sapo.pt'
+  default from: 'contact@artequecura.xyz'
   layout 'mailer'
 end
