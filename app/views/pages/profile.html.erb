@@ -51,6 +51,7 @@
                       <p>Qt:<%= item.quantity %></p>
                    <% end %>
                    <h6>Total: <%= humanized_money_with_symbol(order.sub_total) %></h6>
+                   <p>Pagamento: <%= order.state %></p>
                   </li>
                    <p><i>Comprado</i> a:<%= order.created_at %></p>
                 <% end %>
